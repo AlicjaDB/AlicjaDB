@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja lotu</title>
+    
+</head>
+<body>
+    
+    
+        <header class="header">
+            <class class="logo">
+                <img src="assets/img/preview.jpg">
+            </class>
+    
+
+        <nav> 
+            <ul>
+                <li><a href="">Informacje</a></li>
+                <li><a href="">Zaloguj się</a></li>
+                <li><a href="">Język</a></li>
+            </ul>
+             
+            </nav>
+        </header>
+        <main>
+            
+                <div class="popup-content">
+                    <div class="popup-content1">
+                        <img src="./assets/img/cancel.png" alt="Cancel" class="cancel">
+                    <img class="user" src="./assets/img/user.png" alt="User">
+                    <input class="input1" type="text" placeholder="Username">
+                    <input class="input2" type="password" placeholder="Password">
+                    <a href="#" class="button" id="button">Zaloguj się</a>
+                    </div>
+                    
+                    
+                </div>
+        <div class="booking">
+            
+            <form action="">
+                <div class="container2">
+                <!-- <label for="departure">Miejsce wylotu</label> -->
+                <select name="Miejsce wylotu" id="Select">
+                    <option value="Miejsce wylotu">Miejsce wylotu</option>
+                    <option value="krk">Kraków</option>
+                    <option value="ktw">Katowice</option>
+                    <option value="rz">Rzeszów</option>
+                </select>
+                <!-- <label for="arrival">Miejsce Przylotu</label> -->
+                <select name="Miejsce Przylotu" id="Select">
+                    <option value="Miejsce przylotu">Miejsce przylotu</option>
+                    <option value="pzr">Paryż</option>
+                    <option value="ny">New York</option>
+                    <option value="tj">Tajlandia</option>
+                </select>
+                <label for="arrivalDate">Wybierz datę przylotu</label>
+                <input type="date"name="arrivalDate" id="">
+                <label for="departureDate">Wybierz datę powrotu</label>
+                <input type="date"name="departureDate" id="">
+                <!-- <label for="lp">Liczba Pasażerów</label> -->
+                <select type="Liczba" id="Select">
+                <option value="">Wybierz ilość pasażerów</option>
+                <option value="one">1 pasażer</option>
+                <option value="two">2 pasażerów</option>
+                <option value="three">3 pasażerów</option>
+                </select>
+                
+                <input type="submit" value="Rezerwuj" id="xxx" />
+                
+            </div>
+        </form>
+        
+    </div>
+    <div class="container3">
+        <div class="app-title">Pogoda</div>
+        <div class="notification"></div>
+        <div class="weather-container">
+            <div class="weather-icon"><img src="icons/sun.svg"></div>
+            <div class="temperature-value"><p>- &#186;<span>C</span></p></div>
+            <div class="temperature-description"><p> - </p></div>
+            <div class="location"><p>-</p></div>
+        </div>
+    </div>
+    
+        </main>
+        <footer class="Stopka">
+            <div>Strona rezerwacyjna na potrzeby studiów</div>
+            <div>&copy; Alicja Duc-Burek</div>
+            
+        </footer>
+    </div>
+</div>
+
+</div>
+    <!-- <script src="bundle.js"></script> -->
+</body>
+</html>
