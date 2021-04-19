@@ -31,8 +31,8 @@
                     <div class="popup-content1">
                         <img src="./assets/img/cancel.png" alt="Cancel" class="cancel">
                     <img class="user" src="./assets/img/user.png" alt="User">
-                    <input class="input1" type="text" placeholder="Username">
-                    <input class="input2" type="password" placeholder="Password">
+                    <input class="input1" type="text" placeholder="Nazwa użytkownika">
+                    <input class="input2" type="password" placeholder="Hasło">
                     <a href="#" class="button" id="button">Zaloguj się</a>
                     </div>
                     
@@ -68,22 +68,34 @@
                 <option value="three">3 pasażerów</option>
                 </select>
                 
-                <input type="submit" value="Rezerwuj" id="xxx" />
+                <a href="#" class="submit" id="xxx">Rezerwuj</a>
                 
             </div>
         </form>
         
     </div>
-    <div class="container3">
-        <div class="app-title">Pogoda</div>
-        <div class="notification"></div>
-        <div class="weather-container">
-            <div class="weather-icon"><img src="icons/sun.svg"></div>
-            <div class="temperature-value"><p>- &#186;<span>C</span></p></div>
-            <div class="temperature-description"><p> - </p></div>
-            <div class="location"><p>-</p></div>
+    
+    <div class="container3"><p>Pogoda</p>
+        <form id="search-form">
+            <input type="search" placeholder="Enter City Name" id="search-input"
+            required autocomplete="off"/>
+            
+            <button id="search-button">Search</button>
+        </form>
+    <div id="location">
+        <p>---------</p>
         </div>
+        <div id="temp">
+        <img id="temp-icon" src="./icons/sun.svg" alt="">
+        <p><span id="temp-value">-------</span> <span id="temp-unit">&#176c</span> </p>
+        </div>
+        <div id="climate">
+        <p>--------</p>
+        </div>
+        <div id="date"><p>-----</p></div>
     </div>
+    
+
     
         </main>
         <footer class="Stopka">
