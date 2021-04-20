@@ -18,15 +18,17 @@
 
         <nav> 
             <ul>
-                <li><a href="">Informacje</a></li>
-                <li><a href="">Zaloguj się</a></li>
-                <li><a href="">Język</a></li>
+                <li><a href="" id= "info">Informacje</a></li>
+                <li><a href="" id ="in">Zaloguj się</a></li>
+                <li><a href="" id="lang">Język</a></li>
             </ul>
              
             </nav>
         </header>
         <main>
             
+            
+       
                 <div class="popup-content">
                     <div class="popup-content1">
                         <img src="./assets/img/cancel.png" alt="Cancel" class="cancel">
@@ -76,23 +78,33 @@
     </div>
     
     <div class="container3"><p>Pogoda</p>
-        <form id="search-form">
-            <input type="search" placeholder="Enter City Name" id="search-input"
-            required autocomplete="off"/>
-            
-            <button id="search-button">Search</button>
-        </form>
-    <div id="location">
-        <p>---------</p>
+    <input type="text" placeholder="Enter City Name" class="pogoda">
+    <input type="submit" value="Wybierz" class="submit8">
+    <div class="location">
+        <div class="card">
+        <h1 class="name" id="name"></h1>
+        <p class="temp">
+            <img id="temp-icon" src="./icons/sun.svg" alt="">
+        </p>
+        <p><span id="temp-value">......</span> <span id="temp-unit" >&#176c</span> </p>
+        <p class="desc"></p>
         </div>
-        <div id="temp">
-        <img id="temp-icon" src="./icons/sun.svg" alt="">
-        <p><span id="temp-value">-------</span> <span id="temp-unit">&#176c</span> </p>
+        <div class="datetime">
+            <div class="date">
+                <span id="dayname">Day</span>
+                <span id="month">Month</span>
+                <span id="daynr">00</span>
+                <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hour">00</span>
+                    <span id="minutes">00</span>
+                    <span id="seconds">00</span>
+                    <span id="period">AM</span>
+                </div>
         </div>
-        <div id="climate">
-        <p>--------</p>
-        </div>
-        <div id="date"><p>-----</p></div>
+    </div>
+        
     </div>
     
 
