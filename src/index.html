@@ -18,9 +18,9 @@
 
         <nav> 
             <ul>
-                <li><a href="" id= "info">Informacje</a></li>
-                <li><a href="" id ="in">Zaloguj się</a></li>
-                <li><a href="" id="lang">Język</a></li>
+                <li ><a href="" id= "info">Informacje</a></li>
+                <li ><a href="" id ="in">Zaloguj się</a></li>
+                <li ><a href="" id="lang">Język</a></li>
             </ul>
              
             </nav>
@@ -77,30 +77,26 @@
         
     </div>
     
-    <div class="container3"><p>Pogoda</p>
+    <div class="container3"><p>Sprawdź pogodę</p>
     <input type="text" placeholder="Enter City Name" class="pogoda">
     <input type="submit" value="Wybierz" class="submit8">
     <div class="location">
         <div class="card">
         <h1 class="name" id="name"></h1>
         <p class="temp">
-            <img id="temp-icon" src="./icons/sun.svg" alt="">
+            <img id="icon" src="https://openweathermap.org/img/wn/04n.png" alt="" />
         </p>
         <p><span id="temp-value">......</span> <span id="temp-unit" >&#176c</span> </p>
-        <p class="desc"></p>
+        <p class="desc">.....</p>
         </div>
         <div class="datetime">
             <div class="date">
-                <span id="dayname">Day</span>
-                <span id="month">Month</span>
-                <span id="daynr">00</span>
-                <span id="year">Year</span>
-                </div>
+            <div id="date_now">
+                
+            </div>
                 <div class="time">
-                    <span id="hour">00</span>
-                    <span id="minutes">00</span>
-                    <span id="seconds">00</span>
-                    <span id="period">AM</span>
+                <div id="time_now">
+                </div>
                 </div>
         </div>
     </div>

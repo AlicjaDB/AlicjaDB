@@ -22,6 +22,9 @@ plugins: [
 new HtmlWebpackPlugin({
 template: "./src/index.html"
 }),
+// new HtmlWebpackPlugin({
+//     template: "./src/podstrona.html"
+//     }),
 new HtmlWebpackPlugin({
     template: './src/podstrona.html',
     inject: true,

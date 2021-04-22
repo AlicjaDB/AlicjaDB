@@ -1,4 +1,3 @@
-
 import style from "../src/index.scss"
 
 // document.getElementById("xxx").addEventListener("mousedown", function () {
@@ -32,46 +31,30 @@ document.querySelector(".cancel").addEventListener("click", function(){
 
 
 ///// data i godzina 
-
-function updateClock(){
-var now = new Date();
-var dname = now.getDay(),
-    mo = now.getMonth(),
-    dnum= now.getDate(),
-    yr= now.getFullYear(),
-    hou = now.getHours(),
-    min = now.getMinutes(),
-    sec = now.getSeconds(),
-    pe = "AM";
-
-if(hou == 0){
-  hou = 12;
-
-}
-if(hou>12){
-  hou= hou -12;
-  pe = "PM";
+function getTime() 
+{
+    return (new Date()).toLocaleTimeString();
 }
 
-Number.prototype.pad = function(digits){
-  for(var n= this.toString(); n.length < digits; n= 0 + n);
-  return n;
-}
+document.getElementById('time_now').innerHTML = getTime();
 
-var months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
-var week = ["Monday","Tuesday","Wendsday","Thursday","Friday", "Saturday","Sunday"];
-var ids= ["dayname","month", "daynr", "year", "hour","minutes", "seconds", "period"];
-var values = [week[dname],months[mo], dnum.pad(2),yr,hou.pad(2), min.pad(2), sec.pad(2),pe];
-for(var i= 0; i < ids.length; i++)
-document.getElementsById("datetime").addEventListener("click", function(){
+setInterval(function() {
+
+    document.getElementById('time_now').innerHTML = getTime();
+    
+}, 1000);
+
+const currentDate = new Date();
+const month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+const day = currentDate.getDate();
+const year = currentDate.getFullYear();
+const fullDate = (day  + "." + month  + "." + year);
+document.getElementById("date_now").innerHTML =fullDate;
 
 
+// const months = ["January" , "February", "March" , "April", "May", "June", "July", "August", "September", "November", "October", "November", "December"];
+// const week  = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-function initClock(){
-  updateClock();
-  console.log("updateClock()", 1 )}
-})
-}
 //// pogoda ///////
 
 let button8 = document.querySelector('.submit8');
@@ -80,6 +63,10 @@ let name = document.querySelector('.name');
 let desc = document.querySelector('.desc');
 let temp= document.querySelector('.temp');
 let tempvalue=document.getElementById("temp-value");
+let icon =document.getElementById('icon');
+ 
+
+        
 
 
 
@@ -92,40 +79,22 @@ button8.addEventListener('click', function(){
      const nameValue = data['name'];
      const tempValue = data['main']['temp'];
      const descValue = data['weather'][0]['description'];
+     const iconUrl =`http://openweathermap.org/img/w/${data.weather[0].icon}.png` 
+     icon.setAttribute('src', iconUrl);
      
      
-       
+     
+    
+     
+     
+     
   name.innerHTML =nameValue;
   desc.innerHTML = descValue;
+  
   tempvalue.innerHTML=Math.round(tempValue-273);
   
-  // if(id<300 && id>200)
   
-  //       {
-  //           tempicon.src="./icons/storm.svg"
-  //       }
-  //      else  if(id<400 && id>300)
-  //       {
-  //           tempicon.src="./icons/clouds.svg"
-  //       }
-  //      else if(id<600&& id>500)
-  //       {
-  //           tempicon.src="./icons/rain.svg"
-  //       }
-  //      else  if(id<700 && id>600)
-  //       {
-  //           tempicon.src="./icons/snow.svg"
-  //       }
-  //      else  if(id<800 && id>700)
-  //       {
-  //           tempicon.src="./icons/cloud.svg"
-  //       }
-  //        else if(id==800)
-  //       {
-  //           tempicon.src="./icons/sun and cloud.svg"
-  //       }
-
-
+  
   
    
  })
@@ -136,8 +105,9 @@ button8.addEventListener('click', function(){
   
   .catch(err => alert("Wrong city name!"));
   
-})
-  
+});
+
+
 
 
 
