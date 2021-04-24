@@ -8,7 +8,10 @@ const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
-entry: "./src/index.js",
+entry: { 
+    index:"./src/index.js",
+    podstrona: "./src/podstrona.js"
+},
 output: {
 path: path.resolve(__dirname, "dist"),
 filename: "[contenthash]bundle.js"
@@ -20,15 +23,15 @@ port: 9000,
 },
 plugins: [
 new HtmlWebpackPlugin({
-template: "./src/index.html"
+template: "./src/index.html",
+chunks:['index'],
+
 }),
-// new HtmlWebpackPlugin({
-//     template: "./src/podstrona.html"
-//     }),
+
 new HtmlWebpackPlugin({
     template: './src/podstrona.html',
     inject: true,
-    chunks: ['index'],
+    chunks: ['podstrona'],
     filename: 'podstrona.html'
     }),
 new CleanWebpackPlugin(),
@@ -87,6 +90,8 @@ name: "[name].[ext]"
 }
 }
 },
+
+    
 {
 test: /\.(html)$/,
 use: ["html-loader"]

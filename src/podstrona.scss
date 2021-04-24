@@ -1,0 +1,180 @@
+/* *{
+    font-family: "Rimouski";
+  } */
+  html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+ }
+
+
+  body{
+    background-color: #293251;
+    
+    
+    
+    
+  }
+
+.details{
+  display:inline ;
+  font-size: 18px;
+  font-family:Tahoma;
+  float:left;
+  padding: 5em;
+    
+  }
+form{
+        
+  background-color:white;
+  height:350px;
+  width:350px;
+  margin:auto;
+  padding:35px;
+  opacity: 0.7; 
+  font-family:Tahoma;
+  font-size: 18px;
+  font-weight:normal;
+  border-radius: 10px;
+  padding-bottom : 50px;
+}   
+select{
+    
+    padding: 8px;
+    margin: 5px;
+    white-space: nowrap;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    border-radius: 10px;
+    vertical-align: text-top;
+    
+}
+input{
+  font-size: 15px;
+  border-radius: 10px;
+  color: black;
+  padding: 5px;
+  margin: 55px;
+  text-align:left;
+  float:right;
+  background-color: lawngreen;
+
+}
+
+option{
+ font-size: 1.5em;
+ 
+}
+  
+  .container4{
+      
+    /* width: 300px; 
+    height: 350px;    */
+    background-color: #FFF;
+    display:block;
+    float: right;
+    margin: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    padding-bottom : 50px;
+    
+
+  }
+  
+  .app-title{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px solid;
+   
+  }
+  
+  .app-title p{
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 2.5em;
+    color: #293251;
+  }
+  
+  .notification{
+    background-color: #f8d7da;
+    display: none;
+  }
+  
+  .notification p{
+    color: #721c24;
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .weather-container{
+    width: 300px;
+    height: 250px;
+    background-color: #F4F9FF;
+    text-align: center;
+    
+  }
+  
+  .weather-icon{
+    width: 200px;
+    height: 50px;
+    
+   
+
+  }
+  
+  .weather-icon img{
+    display: block;
+    margin: 0 auto;
+    
+    
+  }
+  
+  .temperature-value{
+    width: 300px;
+    height:60px;
+  }
+  
+  .temperature-value p{
+    padding: 0;
+    margin: 0;
+    color: #293251;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .temperature-value span{
+    color: #293251;
+    font-size: 0.5em;
+  }
+  
+  .temperature-description p{
+    padding: 8px;
+    margin: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .location p{
+    margin: 0;
+    padding: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 0.8em;
+  }
+  
+  footer { 
+    
+    color:#FFF;
+    text-align:center;
+    position:absolute;
+		bottom:0;
+		width:100%;
+		height:60px;
+  }

@@ -35,47 +35,72 @@
                     <img class="user" src="./assets/img/user.png" alt="User">
                     <input class="input1" type="text" placeholder="Nazwa użytkownika">
                     <input class="input2" type="password" placeholder="Hasło">
-                    <a href="#" class="button" id="button">Zaloguj się</a>
+                    <a href="#" class="button" id="button" >Zaloguj się</a>
                     </div>
                     
                     
                 </div>
         <div class="booking">
             
-            <form action="">
+            <form action="" >
                 <div class="container2">
                 <!-- <label for="departure">Miejsce wylotu</label> -->
-                <select name="Miejsce wylotu" id="Select">
-                    <option value="Miejsce wylotu">Miejsce wylotu</option>
-                    <option value="krk">Kraków</option>
-                    <option value="ktw">Katowice</option>
-                    <option value="rz">Rzeszów</option>
-                </select>
-                <!-- <label for="arrival">Miejsce Przylotu</label> -->
-                <select name="Miejsce Przylotu" id="Select">
-                    <option value="Miejsce przylotu">Miejsce przylotu</option>
-                    <option value="pzr">Paryż</option>
-                    <option value="ny">New York</option>
-                    <option value="tj">Tajlandia</option>
-                </select>
-                <label for="arrivalDate">Wybierz datę przylotu</label>
-                <input type="date"name="arrivalDate" id="">
-                <label for="departureDate">Wybierz datę powrotu</label>
-                <input type="date"name="departureDate" id="">
-                <!-- <label for="lp">Liczba Pasażerów</label> -->
-                <select type="Liczba" id="Select">
-                <option value="">Wybierz ilość pasażerów</option>
-                <option value="one">1 pasażer</option>
-                <option value="two">2 pasażerów</option>
-                <option value="three">3 pasażerów</option>
+                <select name="Miejsce wylotu" id="select1">
+                    <option disabled hidden selected>Miejsce wylotu</option>
+                    <option value="Kraków" id="krk">Kraków</option>
+                    <option value="Katowice" id="ktw">Katowice</option>
+                    <option value="Rzeszów" id="rz">Rzeszów</option>
                 </select>
                 
-                <a href="#" class="submit" id="xxx">Rezerwuj</a>
+                <!-- <label for="arrival">Miejsce Przylotu</label> -->
+                <select name="Miejsce Przylotu" id="select2">
+                    <option value="Miejsce przylotu">Miejsce przylotu</option>
+                    <option value="Paryż" id="pzr">Paryż</option>
+                    <option value="New York" id="ny">New York</option>
+                    <option value="Tajlandia" id="tj">Tajlandia</option>
+                </select>
+                
+                <label for="arrivalDate">Wybierz datę wylotu</label>
+                <input type="date" name="arrivalDate" id="arrivaldate"> 
+                <label for="departureDate">Wybierz datę powrotu</label>
+                <input type="date"name="departureDate" id="departuredate">
+                
+                <!-- <label for="lp">Liczba Pasażerów</label> -->
+                <select type="Liczba" id="select3">
+                <option value="">Wybierz ilość pasażerów</option>
+                <option value="1 pasażer" id="one">1 pasażer</option>
+                <option value="2 pasażerów" id="two">2 pasażerów</option>
+                <option value="3 pasażerów"id="three">3 pasażerów</option>
+                </select>
+                
+                <a href="" class="submit" id="xxx" >Rezerwuj</a>
                 
             </div>
         </form>
         
     </div>
+
+    <div class="wyswietlanie">
+        <h1>Wybrane opcje</h1>
+        <h2>
+            Miejsce wylotu: <span id="result-name">
+        </h2>
+        <h2>
+           Miejsce przylotu: <span id="result-name1">
+        </h2>
+        <h2>Data przylotu: <span id="result-przylotu">
+        </h2>
+        <h2>Data powrotu: <span id="result-powrotu">
+    
+        </h2>
+        <h2>Ilość pasażerów: <span id="ilosc-pasazerow">
+    
+        </h2>
+        <h2>Cena: <span id="cena">
+    
+        </h2>
+        <a href="" class="submit" id="xxx" >Kontynuuj</a>
+        </div>
     
     <div class="container3"><p>Sprawdź pogodę</p>
     <input type="text" placeholder="Enter City Name" class="pogoda">

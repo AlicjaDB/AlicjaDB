@@ -12,7 +12,7 @@ body{
   align-items:flex-end;
   margin:0px;
   padding: 0px;
-  width: 45vw;
+  width: 25vw;
 }
 
 .header{
@@ -23,42 +23,30 @@ body{
 
 
 li{
-  background: #FFF;
+  
   padding: 10px 15px;
-  color: #34495e;
-  font-weight: bolder;
+  background-color: #FFF;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 6px 6 px 29px -4px rgba(0,0,0,0.75);
   margin-top: 25px;
-  text-decoration: none;
   transition: 0.4s;
   text-align: center;
   display: block;
   border: 2px solid #494949; 
 }
 
-li a:hover { 
-  background: #34495e;
+li:hover { 
+  background:coral;
   color: #FFF;
+  
+ 
 }
 
-  .submit{
-    background: #FFF;
-    padding: 10px 15px;
-    color: #34495e;
-    font-weight: bolder;
-    font-size: 18px;
-    border-radius: 5px;
-    box-shadow: 6px 6 px 29px -4px rgba(0,0,0,0.75);
-    margin-top: 25px;
-    text-decoration: none;
-    transition: 0.4s;
-    text-align: center;
-    display: block;
-    border: 2px solid #494949;
-}
-
+a{
+  color:black;
+  text-decoration: none;
+} 
 
 form{
   background-color:white;
@@ -119,7 +107,9 @@ select{
   padding:10px;
   white-space: nowrap;
   border-radius: 10px;
+  
 }
+
 .container2{
   display:flex;
   align-items: stretch;
@@ -135,6 +125,7 @@ select{
 .logo img{
 width: 50px;
 height:50px;
+border-radius: 5px;
   
 }
 
@@ -202,28 +193,14 @@ color: #494949;
 }
 
 .submit8:hover{
-  color: #ffffff;
-background:#494949;
+color: #ffffff;
+background: #34495e;
 border-color:#494949;
 transition: all 0.4s ease 0s;
 }
   
 
-#info{
-  background: #FFF;
-  padding: 10px 15px;
-  color: #34495e;
-  font-weight: bolder;
-  font-size: 18px;
-  border-radius: 5px;
-  box-shadow: 6px 6 px 29px -4px rgba(0,0,0,0.75);
-  margin-top: 25px;
-  text-decoration: none;
-  transition: 0.4s;
-  text-align: center;
-  display: block;
-  border: 2px solid #494949;
-}
+
 
 
 #search-form{

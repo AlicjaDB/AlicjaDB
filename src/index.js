@@ -1,4 +1,4 @@
-import style from "../src/index.scss"
+import style from "../src/index.scss";
 
 // document.getElementById("xxx").addEventListener("mousedown", function () {
 //   prompt("Zaloguj się");
@@ -65,47 +65,53 @@ let temp= document.querySelector('.temp');
 let tempvalue=document.getElementById("temp-value");
 let icon =document.getElementById('icon');
  
-
-        
-
-
-
 button8.addEventListener('click', function(){
- 
-  fetch('https://api.openweathermap.org/data/2.5/weather?q='+pogoda.value+'&appid=20c5e6a815d03428798c0eef34f7402d')
-  .then(response => response.json())
-  .then(data => {
-     
-     const nameValue = data['name'];
-     const tempValue = data['main']['temp'];
-     const descValue = data['weather'][0]['description'];
-     const iconUrl =`http://openweathermap.org/img/w/${data.weather[0].icon}.png` 
-     icon.setAttribute('src', iconUrl);
-     
-     
-     
-    
-     
-     
-     
-  name.innerHTML =nameValue;
-  desc.innerHTML = descValue;
-  
-  tempvalue.innerHTML=Math.round(tempValue-273);
-  
-  
-  
-  
-   
- })
-    
-  
 
-
-  
-  .catch(err => alert("Wrong city name!"));
-  
+fetch('https://api.openweathermap.org/data/2.5/weather?q='+pogoda.value+'&appid=20c5e6a815d03428798c0eef34f7402d')
+.then(response => response.json())
+.then(data => {
+const nameValue = data['name'];
+const tempValue = data['main']['temp'];
+const descValue = data['weather'][0]['description'];
+const iconUrl =`http://openweathermap.org/img/w/${data.weather[0].icon}.png` 
+icon.setAttribute('src', iconUrl);
+name.innerHTML =nameValue;
+desc.innerHTML = descValue;
+tempvalue.innerHTML=Math.round(tempValue-273);
+})
+    
+.catch(err => alert("Wrong city name!"));
 });
+///// data z kalendarza ////
+
+///// wyswietlanie formularza ////
+
+
+
+let selection = document.getElementById('select1');
+let result = document.getElementById('result-name');
+
+selection.addEventListener('change', () => {
+    result.innerText = selection.options[selection.selectedIndex].value;
+    console.log(selection.selectedIndex);
+});
+
+let selection1 = document.getElementById('select2');
+let result1 = document.getElementById('result-name1');
+
+selection1.addEventListener('change', () => {
+    result1.innerText = selection1.options[selection1.selectedIndex].value;
+    console.log(selection1.selectedIndex);
+});
+let selection2 = document.getElementById('select3');
+let result2 = document.getElementById('ilosc-pasazerow');
+
+selection2.addEventListener('change', () => {
+    result2.innerText = selection2.options[selection2.selectedIndex].value;
+    console.log(selection2.selectedIndex);
+});
+
+
 
 
 
