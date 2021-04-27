@@ -1,5 +1,6 @@
 import style from "../src/index.scss";
 
+
 // document.getElementById("xxx").addEventListener("mousedown", function () {
 //   prompt("Zaloguj się");
 // });
@@ -111,8 +112,25 @@ selection2.addEventListener('change', () => {
     console.log(selection2.selectedIndex);
 });
 
+/// data input /////
 
+let arriv=document.getElementById("arrivaldate");
+let result3=document.getElementById("result-przylotu");
 
+arriv.addEventListener('change', updateValue );
+
+function updateValue(e){
+    result3.textContent=e.target.value;
+};
+
+let dept=document.getElementById("departuredate");
+let result4=document.getElementById("result-powrotu");
+
+dept.addEventListener('change', updateValue1 );
+
+function updateValue1(e){
+    result4.textContent=e.target.value;
+}
 
 
 

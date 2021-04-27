@@ -22,16 +22,14 @@
                 <li ><a href="" id ="in">Zaloguj się</a></li>
                 <li ><a href="" id="lang">Język</a></li>
             </ul>
-             
-            </nav>
+        </nav>
         </header>
         <main>
             
             
-       
-                <div class="popup-content">
+    <div class="popup-content">
                     <div class="popup-content1">
-                        <img src="./assets/img/cancel.png" alt="Cancel" class="cancel">
+                    <img src="./assets/img/cancel.png" alt="Cancel" class="cancel">
                     <img class="user" src="./assets/img/user.png" alt="User">
                     <input class="input1" type="text" placeholder="Nazwa użytkownika">
                     <input class="input2" type="password" placeholder="Hasło">
@@ -42,18 +40,17 @@
                 </div>
         <div class="booking">
             
-            <form action="" >
+            <form action=""  >
                 <div class="container2">
-                <!-- <label for="departure">Miejsce wylotu</label> -->
-                <select name="Miejsce wylotu" id="select1">
+                
+            <select name="Miejsce wylotu" id="select1">
                     <option disabled hidden selected>Miejsce wylotu</option>
                     <option value="Kraków" id="krk">Kraków</option>
                     <option value="Katowice" id="ktw">Katowice</option>
                     <option value="Rzeszów" id="rz">Rzeszów</option>
                 </select>
                 
-                <!-- <label for="arrival">Miejsce Przylotu</label> -->
-                <select name="Miejsce Przylotu" id="select2">
+            <select name="Miejsce Przylotu" id="select2">
                     <option value="Miejsce przylotu">Miejsce przylotu</option>
                     <option value="Paryż" id="pzr">Paryż</option>
                     <option value="New York" id="ny">New York</option>
@@ -61,11 +58,9 @@
                 </select>
                 
                 <label for="arrivalDate">Wybierz datę wylotu</label>
-                <input type="date" name="arrivalDate" id="arrivaldate"> 
+                <input type="date" name="arrivalDate" id="arrivaldate" >
                 <label for="departureDate">Wybierz datę powrotu</label>
                 <input type="date"name="departureDate" id="departuredate">
-                
-                <!-- <label for="lp">Liczba Pasażerów</label> -->
                 <select type="Liczba" id="select3">
                 <option value="">Wybierz ilość pasażerów</option>
                 <option value="1 pasażer" id="one">1 pasażer</option>
@@ -73,7 +68,7 @@
                 <option value="3 pasażerów"id="three">3 pasażerów</option>
                 </select>
                 
-                <a href="" class="submit" id="xxx" >Rezerwuj</a>
+                <a href="" class="submit" id="xxx">Rezerwuj</a>
                 
             </div>
         </form>
@@ -81,26 +76,24 @@
     </div>
 
     <div class="wyswietlanie">
-        <h1>Wybrane opcje</h1>
-        <h2>
-            Miejsce wylotu: <span id="result-name">
-        </h2>
-        <h2>
-           Miejsce przylotu: <span id="result-name1">
-        </h2>
-        <h2>Data przylotu: <span id="result-przylotu">
-        </h2>
-        <h2>Data powrotu: <span id="result-powrotu">
-    
-        </h2>
-        <h2>Ilość pasażerów: <span id="ilosc-pasazerow">
-    
-        </h2>
-        <h2>Cena: <span id="cena">
-    
-        </h2>
-        <a href="" class="submit" id="xxx" >Kontynuuj</a>
-        </div>
+        <table>
+        <h2>Wybrane opcje</h2>
+        <td>Miejsce wylotu: <span id="result-name">
+        </td>
+        <td>
+        Miejsce przylotu: <span id="result-name1">
+        </td>
+        <td>Data przylotu: <span id="result-przylotu">
+        </td>
+        <td>Data powrotu: <span id="result-powrotu">
+        </td>
+        <td>Ilość pasażerów: <span id="ilosc-pasazerow">
+        </td>
+        <td>Cena: <span id="cena">
+        </td>
+    </table>
+    <a href="" class="submit6" id="xxx" >Kontynuuj</a>
+    </div>
     
     <div class="container3"><p>Sprawdź pogodę</p>
     <input type="text" placeholder="Enter City Name" class="pogoda">
@@ -109,20 +102,19 @@
         <div class="card">
         <h1 class="name" id="name"></h1>
         <p class="temp">
-            <img id="icon" src="https://openweathermap.org/img/wn/04n.png" alt="" />
+        <img id="icon" src="https://openweathermap.org/img/wn/04n.png" alt="" />
         </p>
         <p><span id="temp-value">......</span> <span id="temp-unit" >&#176c</span> </p>
         <p class="desc">.....</p>
         </div>
         <div class="datetime">
-            <div class="date">
-            <div id="date_now">
-                
-            </div>
-                <div class="time">
-                <div id="time_now">
-                </div>
-                </div>
+        <div class="date">
+        <div id="date_now">
+        </div>
+        <div class="time">
+        <div id="time_now">
+        </div>
+        </div>
         </div>
     </div>
         
