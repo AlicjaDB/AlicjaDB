@@ -1,162 +1,211 @@
-
- 
-body {
-    margin:0;
-    padding:0;
-    height:100%;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-
-  body{
-    background-color: #293251;
-    
-    
-    
-    
+body {
+  background-image: url(./assets/img/tło-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   }
-
+main{
+  display: flex;
+align-items: center;
+justify-content:space-around;
+flex-direction:row;
+flex-wrap: wrap;
+}
 .details{
-  display:inline ;
-  font-size: 18px;
-  font-family:Tahoma;
-  float:left;
-  padding: 5em;
-    
-  }
+display:block ;
+font-size: 18px;
+font-family:Tahoma;
+padding: 5em;
+  
+}
 form{
-        
-  background-color:white;
-  height:350px;
-  width:350px;
-  margin:auto;
-  padding:35px;
-  opacity: 0.7; 
-  font-family:Tahoma;
-  font-size: 18px;
-  font-weight:normal;
-  border-radius: 10px;
-  padding-bottom : 50px;
+display: block;      
+background-color: white;
+height: auto;
+width:850px;
+padding:35px;
+font-family:Tahoma;
+font-size: 18px;
+font-weight:normal;
+border-radius: 10px;
+
 }   
 select{
-    
-    padding: 8px;
-    margin: 5px;
-    white-space: nowrap;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-    border-radius: 10px;
-    vertical-align: text-top;
-    
+padding: 8px;
+margin: 5px;
+white-space: nowrap;
+-webkit-transition: 0.2s all;
+transition: 0.2s all;
+border-radius: 10px;
+vertical-align: text-top;
+  
 }
 input{
-  font-size: 15px;
-  border-radius: 10px;
-  color: black;
-  padding: 5px;
-  margin: 55px;
-  text-align:left;
-  float:right;
-  background-color: lawngreen;
-
+font-size: 15px;
+border-radius: 10px;
+color: black;
+padding: 5px;
+margin: 55px;
+text-align:left;
+float:right;
+background-color: lawngreen;
 }
 
 option{
- font-size: 1.5em;
- 
+font-size: 1.5em;
+
 }
-  
+
 .container4{
 
-  width: 500px; 
-  height: 600px;   
-  background-color: #FFF;
-  display: block;
-  text-align: center;
-  padding: 5px;
-  margin: 0;
-  border-radius: 10px;
-  padding-bottom: 15px;
-  margin-top: 55px;
-  opacity: 0,7;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-bottom: 25px;
-  
-  
-  }
-  .container4 p{
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, border;
-  font-size: 25px;
-  color: #494949;
+width: 500px; 
+height: 600px;   
+background-color: #FFF;
+display: block;
+text-align: center;
+padding: 5px;
+border-radius: 10px;
+opacity: 0,7;
+
+
+
+}
+.container4 p{
+text-align: center;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, border;
+font-size: 25px;
+color: #494949;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+#search-button{
+color: #494949;
   text-transform: uppercase;
-  font-weight: 600;
-  }
+  text-decoration: none;
+  background: white;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 11px;
+  border: 2px solid #494949;
+  display: inline-block;
+  transition: all 0.4 ease 0s;
+}
+
+.submit8:hover{
+color: #ffffff;
+background: #34495e;
+border-color:#494949;
+transition: all 0.4s ease 0s;
+}
   
-  #search-button{
-  color: #494949;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: white;
-    border-radius: 5px;
-    margin-left: 15px;
-    padding: 11px;
-    border: 2px solid #494949;
-    display: inline-block;
-    transition: all 0.4 ease 0s;
-   
-  }
-  
-  .submit8:hover{
-  color: #ffffff;
-  background: #34495e;
-  border-color:#494949;
-  transition: all 0.4s ease 0s;
-  }
-    
-  
-  
-  
-  
-  #search-form{
-  display: flex;
+
+
+
+
+#search-form{
+display: flex;
+align-items: center;
+padding: 15px;
+margin: 2px;
+height: 20%;
+width: 25%;
+float: none;
+}
+
+#search-button:hover{
+color: #ffffff;
+background:#494949;
+border-color:#494949;
+transition: all 0.4s ease 0s;
+}
+
+
+
+
+footer{
+  display:flex;
   align-items: center;
-  padding: 15px;
-  margin: 2px;
-  height: 20%;
-  width: 25%;
-  float: none;
-  }
-  
-  #search-button:hover{
-  
-  color: #ffffff;
-  background:#494949;
-  border-color:#494949;
-  transition: all 0.4s ease 0s;
-  }
-  
-  
-  
-  
-  footer{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 25px;
-    border-top-width: thin;
-    padding: 25px;
-    margin:25px;
-    color: white;
-  }
+  justify-content: center;
+  flex-direction: column;
+  height: 25px;
+  border-top-width: thin;
+  padding: 25px;
+  margin:25px;
+  color: white;
+}
 
-  ///// samolot /////
-  .occupied {
-    fill: red;
-  }
-  .free {
-    fill: #211616;
-  }
+///// samolot /////
 
- 
+.occupied{
+  fill: red;
+}
+#ico_main:hover{
+  fill:hotpink;
+}
+.free {
+  fill:greenyellow;
+}
+
+.occupied1{
+  fill: red;
+}
+.free1{
+  fill:lawngreen;
+}
+
+.plane{
+  display: none;
+  width: 60vw;
+  height: 200vh;
+  flex-shrink: 1;
+
+}
+.active{
+  display: block;
+}
+
+.planeE{
+  display: none;
+  width:60vw;
+  height:200vh;
+}
+.active1{
+  display:block;
+}
+.planeS{
+  display: none;
+  width:60vw;
+  height:200vh;
+}
+.active2{
+  display:block;
+}
+.loty{
+  display: flex;
+  background: white;
+}
+
+///// ticket ////
+.ticket{
+  display: inline-flex;
+  background: white;
+  height: 200px;
+  width: 800px;
+}
+
+//// plane ////
+
+.checkplane{
+  border: white;
+  border-style: solid;
+  display: block;
+  
+  max-width: 1500px;
+  max-height: 800px;
+}

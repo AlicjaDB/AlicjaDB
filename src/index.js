@@ -21,8 +21,9 @@ btn1.addEventListener("click",pop_up);
 
 
 
-document.getElementById("xxx").addEventListener("click",function(){
-     document.querySelector(".popup-content").style.display = "flex";
+document.getElementById("xxx").addEventListener("click",function()
+{
+document.querySelector(".popup-content").style.display = "flex";
 })
 
 document.querySelector(".cancel").addEventListener("click", function(){
@@ -65,7 +66,7 @@ let desc = document.querySelector('.desc');
 let temp= document.querySelector('.temp');
 let tempvalue=document.getElementById("temp-value");
 let icon =document.getElementById('icon');
- 
+
 button8.addEventListener('click', function(){
 
 fetch('https://api.openweathermap.org/data/2.5/weather?q='+pogoda.value+'&appid=20c5e6a815d03428798c0eef34f7402d')
@@ -131,8 +132,6 @@ dept.addEventListener('change', updateValue1 );
 function updateValue1(e){
     result4.textContent=e.target.value;
 }
-
-
 
 
 
