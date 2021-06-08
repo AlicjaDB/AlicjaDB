@@ -82,8 +82,9 @@ text-align: center;
 display: block;
 border: 2px solid #494949;
 width: 700px;
-
 }
+
+
 .submit:hover{
 background: #34495e;
 color: #FFF;
@@ -391,5 +392,22 @@ td{
     justify-content: center;
     text-align: center
     margin 35px;
+    padding: 25px;
   }
+}
+
+@media only screen and (max-width: 600px){
+  nav{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+main{
+  display: block;
+  justify-content: center;
+  text-align: center
+  margin 35px;
+  padding: 25px;
+  flex-direction: column;
+}
 }

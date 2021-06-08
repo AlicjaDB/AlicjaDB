@@ -24,20 +24,22 @@ padding: 5em;
   
 }
 form{
-display: block;      
+display:flex;
+flex-direction:column; 
+text-align:center;  
 background-color: white;
-height: auto;
-width:850px;
-padding:35px;
+width:650px;
+padding:15px;
 font-family:Tahoma;
 font-size: 18px;
 font-weight:normal;
 border-radius: 10px;
 
+
 }   
 select{
-padding: 8px;
-margin: 5px;
+padding: 5px;
+margin: 10px;
 white-space: nowrap;
 -webkit-transition: 0.2s all;
 transition: 0.2s all;
@@ -46,12 +48,13 @@ vertical-align: text-top;
   
 }
 input{
+display:block;
 font-size: 15px;
 border-radius: 10px;
 color: black;
 padding: 5px;
-margin: 55px;
-text-align:left;
+margin: 5px;
+text-align:center;
 float:right;
 background-color: lawngreen;
 }
@@ -64,9 +67,10 @@ font-size: 1.5em;
 .container4{
 
 width: 500px; 
-height: 600px;   
+height: 500px;   
 background-color: #FFF;
-display: block;
+display: flex;
+flex-direction: column;
 text-align: center;
 padding: 5px;
 border-radius: 10px;
@@ -106,18 +110,6 @@ transition: all 0.4s ease 0s;
   
 
 
-
-
-#search-form{
-display: flex;
-align-items: center;
-padding: 15px;
-margin: 2px;
-height: 20%;
-width: 25%;
-float: none;
-}
-
 #search-button:hover{
 color: #ffffff;
 background:#494949;
@@ -125,8 +117,24 @@ border-color:#494949;
 transition: all 0.4s ease 0s;
 }
 
-
-
+#btn8{
+  color: #494949;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: white;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 11px;
+  border: 2px solid #494949;
+  display: inline-block;
+  transition: all 0.4 ease 0s;
+}
+#btn8:hover{
+  color: #ffffff;
+  background:#494949;
+  border-color:#494949;
+  transition: all 0.4s ease 0s;
+  }
 
 footer{
   display:flex;
@@ -191,13 +199,8 @@ footer{
   background: white;
 }
 
-///// ticket ////
-.ticket{
-  display: inline-flex;
-  background: white;
-  height: 200px;
-  width: 800px;
-}
+
+
 
 //// plane ////
 
@@ -205,7 +208,65 @@ footer{
   border: white;
   border-style: solid;
   display: block;
-  
+  flex-direction:column;
   max-width: 1500px;
   max-height: 800px;
+}
+////ticket /// 
+
+.ticket{
+display: flex;
+flex-direction: column;
+background: white;
+height: 200px;
+width: 800px;
+  }
+
+h1{
+ color:white;
+font-size: 45px;
+font-weight: 900;
+}
+.nazwa{
+margin: 5px;
+background-color: orange;
+}
+.nazwa1{
+display: flex;
+flex-direction: column;
+}
+///// media ////
+
+@media(max-width: 768px){
+  header #header, header nav, header li{
+    float:none;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+   font-size: 15px;
+  }
+  header{
+    padding-bottom: 15px;
+  }
+  main{
+    display: block;
+    justify-content: center;
+    text-align: center
+    margin 5px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+
+main{
+  display: block;
+  justify-content: center;
+  text-align: center
+  margin 5px;
+  padding: 5px;
+  flex-direction: column;
+}
 }

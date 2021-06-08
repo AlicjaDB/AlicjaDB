@@ -34,39 +34,7 @@ tempvalue.innerHTML=Math.round(tempValue-273);
 .catch(err => alert("Wrong city name!"));
 });
 
-///// Szczegoły lotu //////
-let selection8 = document.getElementById('Selecttwo');
-let result8 = document.getElementById('che-plane');
-
-selection8.addEventListener('change', () => {
-    result8.innerHTML = selection8.options[selection8.selectedIndex].value;
-    
-    console.log(selection8.selectedIndex);
-});
-
-let selectOne = document.getElementById('Selectone');
-let bag = document.getElementById('bag-name');
-
-selectOne.addEventListener('change', () => {
-    bag.innerText = selectOne.options[selectOne.selectedIndex].value;
-    console.log(selectOne.selectedIndex);
-});
-
-let selectFirst = document.getElementById('SelectFirst');
-let lotx = document.getElementById('lot-name');
-
-selectFirst.addEventListener('change', () => {
-    lotx.innerText = selectFirst.options[selectFirst.selectedIndex].value;
-    console.log(selectFirst.selectedIndex);
-});
-
-let selectThree = document.getElementById('Selectthree');
-let se = document.getElementById('se-plane');
-
-selectThree.addEventListener('change', () => {
-    se.innerText = selectThree.options[selectThree.selectedIndex].value;
-    console.log(selectThree.selectedIndex);
-});
+/// Szczegoły lotu //////
 
 
 ///// Wybrany samolot/////
@@ -121,173 +89,44 @@ document.getElementById(seatsArray[i]).addEventListener("click", function () {
     
     
     document.getElementById("value").innerHTML = "";
-    document.getElementById("se-plane").innerHTML = this.id;
+    document.getElementById("miejsce").innerHTML = this.id;
   })
 
 function button_reset() {
 document.getElementById("value").innerHTML = "";
 }};
 
-/// cena /////
+/// waluta /////
 
-$('select').on('change', function(){
-  var selected = $("select option:selected").attr('data-price');
- console.log(selected);
+const currency = document.getElementById('currency'),
+  
+  showOption2 = document.getElementById('datachange'),
+  inputValue = document.getElementById('value');
+
+currency.addEventListener('change', function () {
+  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${this.value}/?format=json`)
+    .then((resp) => resp.json())
+    .then(function (data) {
+      console.log(data);
+     
+      showOption2.innerHTML = ` ${(((inputValue.value)/(data.rates[0].mid)).toFixed(2))} `;
+    })
 });
 
-// $(function() {
-//   var basePrice = 25;
-//   $('.options select').change(function (){
-//     var priceSpan = $('#total');      
-//     var newPrice = basePrice,
-//         i = $('.size option:selected').data('price')();
-    
-//       $('.quantity option:selected').each(function(){
-        
-//         var price = $(this).data('price')[i];
-//             newPrice += price;
-//             $(this).val(price);
-//           });
-      
-//           priceSpan.html(newPrice);
-        
-//       });
+///// ceny////
+
+function calculate(price){
+let item = document.getElementById("SelectFirst").value || 0;
+
+let qty = document.getElementById("qty").value || 0;
   
-//   }); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+item = parseFloat(item).toFixed(2);
+qty = parseFloat(qty).toFixed(2);
+  
+const result = parseFloat(item*qty).toFixed(2);
+                  
+  document.getElementById("result").value=result;
+}
 
 
 

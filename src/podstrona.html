@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Szczegóły lotu</title>
     
 </head>
 <body>
 	<main>
     <div class="details">
-        <form action="">
-			<select name="size" class="size" id="SelectFirst">
-                <optWybór value="">Wybór lotu</option>
-                <option value="Kraków-Paryż"  data-price ="200 zl">Kraków-Paryż </option>
-                <option value="Katowice- New York" data-price="1900 zl">Katowice- New York </option>
-                <option value="Kraków-Tajlandia" data-price= "1200 zl">Kraków-Tajlandia</option>
-				<option value="Rzeszów-Paryż" data-price="450 zl">Rzeszów-Paryż</option>
-				<option value="Rzeszów-Tajlandia" data-price="1800 zl">Rzeszów-Tajlandia</option>
-				<option value="Rzeszów-New York " data-price="2500 zł">Rzeszów-New York</option>
+        <form action="" id="price" name="price">
+            <p>Wybierz opcje </p>
+			<select name="" id="SelectFirst" onchange="calculate()">
+                <option id="itemprice" value="">Wybór lotu</option>
+                <option id="itemprice" value="200">Kraków-Paryż </option>
+                <option id="itemprice" value="1900">Katowice- New York </option>
+                <option id="itemprice" value="1200">Kraków-Tajlandia</option>
+				<option id="itemprice" value="450">Rzeszów-Paryż</option>
+				<option id="itemprice"value="1800">Rzeszów-Tajlandia</option>
+				<option id="itemprice"value="2500">Rzeszów-New York</option>
             </select>
-            <select name="" id="Selectone"class="quantity" >
+            <select name="" id="b">
                 <option value="">Wybór Bagażu</option>
-                <option value="Bagaż podręczny(1x 8kg)" data-price="0 zl">Bagaż podręczny(1x 8kg)</option>
-                <option value="Bagaż rejestrowany(1x 23kg)" data-price= "50 zł">Bagaż rejestrowany(1x 23kg)</option>
-                <option value="Bagaż rejestrowany dla niemowlęcia(1 x 23kg)" data-price="100 zl">Bagaż rejestrowany dla niemowlęcia(1 x 23kg)</option>
+                <option value="0">Bagaż podręczny(1x 8kg)</option>
+                <option value="50">Bagaż rejestrowany(1x 23kg)</option>
+                <option value="100">Bagaż rejestrowany dla niemowlęcia(1 x 23kg)</option>
             </select>
             <select  id="Selecttwo">
                 <option value="">Rodzaj Samolotu</option>
@@ -31,44 +33,30 @@
                 <option value="Boeing 737">Boeing 737</option>
                 <option value="Boeing 787">Boeing 787</option>
             </select>   
-			
-            <select name="" id="Selectthree">
+		<select name="" id="c" >
             <option value="Wybór miejsca">Wybór klasy</option>
-            <option value="Basic Class" data-price= "0 zl">Basic Class</option>
-            <option value="Average Class" data-price="50 zl">Average Class</option>
-            <option value="Business Class" data-price= "250 zl">Business Class</option>
+            <option value="0">Basic Class</option>
+            <option value="50 zl">Average Class</option>
+            <option value="250">Business Class</option>
             </select>
-		    <div class="total">
-                <p>€ <span id='price'>25</span></p>
-              </div>
-            <input type="submit" value="Rezerwuj" />
-        
+            <label for="d">Ilość pasażerów:</label>
+            <input type="text" id="qty" onchange="calculate()" value="">
+		<p id="miejsce">Miejsce wybrane to:</p>
+            <input type="text" id="result" value="" disabled>
+            <input type="text" id="value" placeholder="wpisz cenę biletu w PLN" class="valueInput" >
+            <select name="currency" id="currency" class="currencySelect">
+            <option value="" disabled selected>Wybierz walutę:</option>
+            <option value="usd">Dolar amerykański</option>
+            <option value="eur">Euro</option>
+            <option value="gbp">Funt</option>
+    </select>
+    <p>Po przeliczeniu cena w wybranej walucie:</p>
+    <!-- <div id="selected" class="resultField"></div> -->
+    <input id="datachange" class="resultField2"></input>
+    <input id="search2-form" type="submit" value="Rezerwuj" />
     </form>
 </div>
-
-<div class="loty">
-			<table>
-				<h2>Wybrane opcje</h2>
-				<td>Lot: <span id="lot-name"name="price" value="100">
-				</td>
-				<td>
-				Opcje bagażu: <span id="bag-name" name="bagaz" value="100">
-				</td>
-				<td>Wybrany samolot: <span id="che-plane">
-				</td>
-				<td>Wybór klasy: <span id="se-plane" name="klasa" value="100">
-				</td>
-				<td>Wybór miejsca: <span id="se-plane">
-				</td>
-				<td>Cena Łączna <span id="price-tick" class="total">
-				</td>
-				
-			</table>
-			<a href="" class="submit12" id="tick" >Kontynuuj</a>
-        </div>
-		
-		
-
+<div>
 <section class="checkplane">
 	<label for="planefly">Wybór samolotu </label> 
 	<input id="planefly" type="text" placeholder="Wpisz docelowy samolot">
@@ -1834,9 +1822,10 @@
 	</svg>
 	
 	</div>
-	<div>Zresetuj wybrane miejsce<p id="value"></p> </div>
+	<div  id="value">Zresetuj wybrane miejsce</div> 
     <button id="button_reset" onclick="button_reset()"><div>Reset</div></button>
 </section>
+</div>
 	
     <div class="container4"><p>Sprawdź pogodę</p>
         <input type="text" placeholder="Enter City Name" class="pogoda">
@@ -1856,44 +1845,39 @@
 	
 	<div class="ticket">
 	
-        <div>
-          <h4>Munich</h4>
-          <h2>MUC</h2>
+        <div class="nazwa">
+        <h1>Boarding Pass</h1>
+        >
+        </div>
+        <d class="nazwa1">
+        <h4>Rzeszów</h4>
+        <h2>RZE</h2>
+        <h2>to</h2>
+        <h4>Tajlandia</h4>
+        <h2>TAJ</h2>
+        </div>
+    <div class="nazwa2">
+        <h5>Boarding</h5>
+        <p>18:20</p>
         </div>
         <div>
-          <h4>to</h4>
+        <h5>Departure</h5>
+        <p>19:00</p>
         </div>
         <div>
-          <h4>Barcelona</h4>
-          <h2>BCN</h2>
+        <h5>Date</h5>
+        <p>15/08/2021</p>
         </div>
-     
-        <div>
-          <h5>Boarding</h5>
-          <p>18:20</p>
-        </div>
-        <div>
-          <h5>Departure</h5>
-          <p>19:00</p>
+    <div>
+        <h5>Passenger</h5>
+        <p>JOHN SMITH</p>
         </div>
         <div>
-          <h5>Date</h5>
-          <p>15/10/2017</p>
+        <h5>Seat</h5>
+        <p>S04</p>
         </div>
-      
-        <div>
-          <h5>Passenger</h5>
-          <p>Victor Janin</p>
-        </div>
-        <div>
-          <h5>Seat</h5>
-          <p>23A</p>
-        </div>
-      </div>		
-			
-
-
-	</main>
+    </div>		
+    </main>
 	<footer >
 		<div class="Stopka">
 		<div>Strona rezerwacyjna na potrzeby studiów</div>
