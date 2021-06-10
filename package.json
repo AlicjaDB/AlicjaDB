@@ -8,6 +8,7 @@
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development",
     "start:dev": "webpack-dev-server --mode-development"
+    
   },
   "keywords": [],
   "author": "",
