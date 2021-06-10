@@ -25,24 +25,37 @@
         </nav>
         </header>
         <main>
-            
-            
-    <div class="popup-content">
-                    <div class="popup-content1">
-                    <img src="./assets/img/cancel.png" alt="Cancel" class="cancel">
-                    <img class="user" src="./assets/img/user.png" alt="User">
-                    <input class="input1" type="text" placeholder="Nazwa użytkownika">
-                    <input class="input2" type="password" placeholder="Hasło">
-                    <a href="#" class="button" id="button" >Zaloguj się</a>
-                    </div>
-                    
-                    
+            <div class="popup">
+                <div class="close-btn">&times;</div>
+                <div class="form">
+                <h2>Zaloguj się</h2>
+                <div class="form-element">
+                    <label for="email">Nazwa użytkownika</label>
+                    <input type="text" id="email" placeholder="Nazwa Użytkownika">
                 </div>
+                <div class="form-element">
+                    <label for="password">Hasło</label>
+                    <input type="password" id="password" placeholder="Wpisz hasło">
+                </div>
+                <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Zapamiętaj mnie</label>
+                </div>
+                <div class="form-element">
+                    <button>Zaloguj się</button>
+                  </div>
+                  <div class="form-element">
+                    <a href="#">Zapomniałeś hasła?</a>
+                  </div>
+                </div>
+              </div>    
+            
+    
         
             
             <form action=""  >
                 
-            <p>Polecisz Gdzieś?</p>    
+            <p>Polecisz Gdzieś ?</p>    
             <select name="Miejsce wylotu" id="select1">
                     <option disabled hidden selected>Miejsce wylotu</option>
                     <option value="Kraków" id="krk">Kraków </option>
@@ -68,7 +81,7 @@
                 <option value="3 pasażerów"id="three">3 pasażerów</option>
                 </select>
                 
-                <a href="" class="submit" id="xxx">Rezerwuj</a>
+                <button class="submit" id="xxx">Rezerwuj</button>
                 
             
         </form>

@@ -1,41 +1,27 @@
 import style from "../src/index.scss";
 
 
-// document.getElementById("xxx").addEventListener("mousedown", function () {
-//   prompt("Zaloguj się");
-// });
-
-// document.getElementById("xxx").addEventListener("click", function () {
-//   prompt("Zaloguj");
-// });
-
-// okno popup -----------------------------------------------------------------------
-const btn1=document.getElementById("button");
-console.log(btn1);
-const pop1=document.querySelector(".popup-content");
-console.log(pop1);
-function pop_up(){
-    pop1.style.display = "flex";
-}
-btn1.addEventListener("click",pop_up);
-
-
-
-document.getElementById("xxx").addEventListener("click",function()
-{
-document.querySelector(".popup-content").style.display = "flex";
-})
-
-document.querySelector(".cancel").addEventListener("click", function(){
-    document.querySelector(".popup-content").style.display="none";
+document.getElementById("in").addEventListener("mousedown", function () {
+  prompt("Zaloguj się");
 });
 
+document.getElementById("in").addEventListener("click", function () {
+  prompt("Zaloguj");
+});
+
+// okno popup -----------------------------------------------------------------------
+document.getElementById("xxx").addEventListener("click",function(){
+document.querySelector(".popup").classList.add("active");
+});
+document.querySelector(".popup .close-btn").addEventListener("click",function(){
+document.querySelector(".popup").classList.remove("active");
+});
 
 
 ///// data i godzina 
 function getTime() 
 {
-    return (new Date()).toLocaleTimeString();
+return (new Date()).toLocaleTimeString();
 }
 
 document.getElementById('time_now').innerHTML = getTime();

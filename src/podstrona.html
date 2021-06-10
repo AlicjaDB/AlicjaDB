@@ -51,16 +51,18 @@
             <option value="gbp">Funt</option>
     </select>
     <p>Po przeliczeniu cena w wybranej walucie:</p>
-    <!-- <div id="selected" class="resultField"></div> -->
+    <div id="selected" class="resultField"></div>
     <input id="datachange" class="resultField2"></input>
     <input id="search2-form" type="submit" value="Rezerwuj" />
     </form>
 </div>
 <div>
 <section class="checkplane">
-	<label for="planefly">Wybór samolotu </label> 
+	<label for="planefly">Wybór samolotu i miejsca </label> 
 	<input id="planefly" type="text" placeholder="Wpisz docelowy samolot">
 	<button id="btn8">Potwierdź</button>
+    <div  id="value">Zresetuj wybrane miejsce</div> 
+    <button id="button_reset" onclick="button_reset()"><div>Reset</div></button>
 <div class="plane">
     
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1822,8 +1824,7 @@
 	</svg>
 	
 	</div>
-	<div  id="value">Zresetuj wybrane miejsce</div> 
-    <button id="button_reset" onclick="button_reset()"><div>Reset</div></button>
+	
 </section>
 </div>
 	
@@ -1847,34 +1848,31 @@
 	
         <div class="nazwa">
         <h1>Boarding Pass</h1>
-        >
         </div>
-        <d class="nazwa1">
+        <div class="nazwa1">
         <h4>Rzeszów</h4>
         <h2>RZE</h2>
         <h2>to</h2>
         <h4>Tajlandia</h4>
         <h2>TAJ</h2>
-        </div>
-    <div class="nazwa2">
+        <div class="nazwa2">
         <h5>Boarding</h5>
         <p>18:20</p>
-        </div>
-        <div>
         <h5>Departure</h5>
         <p>19:00</p>
-        </div>
-        <div>
         <h5>Date</h5>
         <p>15/08/2021</p>
-        </div>
-    <div>
+        </div class="nazwa3">
+    <div class="nazwa4">
         <h5>Passenger</h5>
         <p>JOHN SMITH</p>
         </div>
-        <div>
+        <div class="nazwa6">
         <h5>Seat</h5>
         <p>S04</p>
+        </div>
+        <div class="nazwa5" >
+        <img src="assets/img/wektor-probki-kodu-qr-na-bialym-tle_255502-275.jpg">
         </div>
     </div>		
     </main>

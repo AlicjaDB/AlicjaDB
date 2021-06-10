@@ -95,6 +95,34 @@ document.getElementById(seatsArray[i]).addEventListener("click", function () {
 function button_reset() {
 document.getElementById("value").innerHTML = "";
 }};
+////// samolo1 /////
+const seatsArray1 = ["x01", "x02", "x03", "x04", "x05", "x06", "x12"];
+
+for (var i = 0; i < seatsArray1.length; i++) {
+console.log(seatsArray1[i]);
+
+
+document.getElementById(seatsArray1[i]).addEventListener("click", function () {
+    console.log("i", i); //ok
+    console.log("id", this.id); //ok
+    console.log(seatsArray1); //ok
+    console.log("całosć", seatsArray1[i]); //not ok
+    if (document.getElementById(this.id).getAttribute("class") == "occupied1") {
+    document.getElementById(this.id).removeAttribute("style");
+    document.getElementById(this.id).setAttribute("class", "free1");
+    } else {
+    document.getElementById(this.id).removeAttribute("style");
+    document.getElementById(this.id).setAttribute("class", "occupied1");
+    }
+    
+    
+    document.getElementById("value").innerHTML = "";
+    document.getElementById("miejsce").innerHTML = this.id;
+  })
+
+function button_reset() {
+document.getElementById("value").innerHTML = "";
+}};
 
 /// waluta /////
 
@@ -107,27 +135,24 @@ currency.addEventListener('change', function () {
   fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${this.value}/?format=json`)
     .then((resp) => resp.json())
     .then(function (data) {
-      console.log(data);
-     
-      showOption2.innerHTML = ` ${(((inputValue.value)/(data.rates[0].mid)).toFixed(2))} `;
+    console.log(data);
+    showOption2.innerHTML = ` ${(((inputValue.value)/(data.rates[0].mid)).toFixed(2))} `;
     })
 });
 
 ///// ceny////
-
-function calculate(price){
-let item = document.getElementById("SelectFirst").value || 0;
-
-let qty = document.getElementById("qty").value || 0;
+// function calculate(){
+//   let item = document.getElementById("SelectFirst").value || 0;
   
-item = parseFloat(item).toFixed(2);
-qty = parseFloat(qty).toFixed(2);
-  
-const result = parseFloat(item*qty).toFixed(2);
-                  
-  document.getElementById("result").value=result;
-}
-
+//   let qty = document.getElementById("qty").value || 0;
+    
+//   item = parseFloat(item).toFixed(2);
+//   qty = parseFloat(qty).toFixed(2);
+    
+//   const result = parseFloat(item*qty).toFixed(2);
+                    
+//     document.getElementById("result").value=result;
+//   }
 
 
 
